@@ -2,21 +2,13 @@
   "name": "copypro",
   "displayName": "CopyPro",
   "description": "Enhanced copy functionality for VS Code",
+  "publisher": "ImmuneFOMO",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.60.0"
   },
   "categories": [
     "Other"
-  ],
-  "activationEvents": [
-    "onCommand:copypro.copyRelativePathWithContent",
-    "onCommand:copypro.copyAllFilesFromDir",
-    "onCommand:copypro.copyAbsolutePath",
-    "onCommand:copypro.copyFileName",
-    "onCommand:copypro.copyRelativePathWithLineNumber",
-    "onCommand:copypro.copyRelativePath",
-    "onCommand:copypro.copyPathRelativeToWorkspace"
   ],
   "main": "./out/extension.js",
   "contributes": {

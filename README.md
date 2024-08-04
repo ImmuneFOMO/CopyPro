@@ -1,71 +1,75 @@
-# copypro README
+# CopyPro
 
-This is the README for your extension "copypro". After writing up a brief description, we recommend including the following sections.
+CopyPro is a powerful Visual Studio Code extension that enhances your copy functionality, making it easier to work with file paths and contents.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+CopyPro provides the following commands:
 
-For example if there is an image subfolder under your extension project workspace:
+1. **Copy Relative Path with Content** (`Ctrl+Alt+C` / `Cmd+Alt+C` on Mac)
+   - Copies the relative path of the current file along with its content.
 
-\!\[feature X\]\(images/feature-x.png\)
+2. **Copy All Files from Directory** (`Ctrl+Alt+D` / `Cmd+Alt+D` on Mac)
+   - Copies the relative paths and contents of all files in a selected directory.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+3. **Copy Absolute Path** (`Ctrl+Alt+A` / `Cmd+Alt+A` on Mac)
+   - Copies the absolute path of the current file.
+
+4. **Copy File Name** (`Ctrl+Alt+N` / `Cmd+Alt+N` on Mac)
+   - Copies just the name of the current file.
+
+5. **Copy Relative Path with Line Number**
+   - Copies the relative path of the current file along with the current line number.
+
+6. **Copy Relative Path**
+   - Copies the relative path of the current file.
+
+7. **Copy Path Relative to Workspace**
+   - Copies the path of the current file relative to the workspace root.
+
+## Usage
+
+You can access all CopyPro commands through the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P` on Mac) by typing "CopyPro".
+
+Additionally, you can use the following keyboard shortcuts:
+
+- `Ctrl+Alt+C` (`Cmd+Alt+C` on Mac): Copy Relative Path with Content
+- `Ctrl+Alt+D` (`Cmd+Alt+D` on Mac): Copy All Files from Directory
+- `Ctrl+Alt+A` (`Cmd+Alt+A` on Mac): Copy Absolute Path
+- `Ctrl+Alt+N` (`Cmd+Alt+N` on Mac): Copy File Name
+
+## Installation
+
+1. Open Visual Studio Code
+2. Press `Ctrl+P` (`Cmd+P` on Mac) to open the Quick Open dialog
+3. Type `ext install ImmuneFOMO.copypro` to find the extension
+4. Click the `Install` button, then the `Enable` button
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+CopyPro requires Visual Studio Code version 1.60.0 or higher.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+There are currently no known issues. If you encounter any problems, please report them on our [GitHub issues page](https://github.com/ImmuneFOMO/CopyPro/issues).
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.0.1
 
-### 1.0.0
+Initial release of CopyPro with all core functionalities.
 
-Initial release of ...
+## Contributing
 
-### 1.0.1
+Contributions are always welcome! Please feel free to submit a Pull Request.
 
-Fixed issue #.
+## License
 
-### 1.1.0
+This project is open source and available under the [MIT License](LICENSE).
 
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
+## More Information
 
 * [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
-**Enjoy!**
+**Enjoy enhanced copying with CopyPro!**

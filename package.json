@@ -4,6 +4,9 @@
   "description": "Enhanced copy functionality for VS Code",
   "publisher": "ImmuneFOMO",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ImmuneFOMO/CopyPro"},
   "engines": {
     "vscode": "^1.60.0"
   },

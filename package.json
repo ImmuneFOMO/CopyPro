@@ -55,17 +55,32 @@
         "command": "copypro.copyRelativePathWithContent",
         "key": "ctrl+alt+c",
         "mac": "cmd+alt+c"
+      },
+      {
+        "command": "copypro.copyAllFilesFromDir",
+        "key": "ctrl+alt+d",
+        "mac": "cmd+alt+d"
+      },
+      {
+        "command": "copypro.copyAbsolutePath",
+        "key": "ctrl+alt+a",
+        "mac": "cmd+alt+a"
+      },
+      {
+        "command": "copypro.copyFileName",
+        "key": "ctrl+alt+n",
+        "mac": "cmd+alt+n"
       }
     ]
   },
-  "scripts": {
+"scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js"
-  },
+},
   "devDependencies": {
     "@types/vscode": "^1.60.0",
     "@types/glob": "^7.1.3",

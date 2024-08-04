@@ -3,7 +3,8 @@
   "displayName": "CopyPro",
   "description": "Enhanced copy functionality for VS Code",
   "publisher": "ImmuneFOMO",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "icon": "images/logo.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/ImmuneFOMO/CopyPro"},

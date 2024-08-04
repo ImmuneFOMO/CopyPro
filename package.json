@@ -13,6 +13,15 @@
   "categories": [
     "Other"
   ],
+  "activationEvents": [
+    "onCommand:copypro.copyRelativePathWithContent",
+    "onCommand:copypro.copyAllFilesFromDir",
+    "onCommand:copypro.copyAbsolutePath",
+    "onCommand:copypro.copyFileName",
+    "onCommand:copypro.copyRelativePathWithLineNumber",
+    "onCommand:copypro.copyRelativePath",
+    "onCommand:copypro.copyPathRelativeToWorkspace"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [

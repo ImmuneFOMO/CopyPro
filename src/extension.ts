@@ -10,7 +10,9 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.commands.registerCommand('copypro.copyFileName', copyFileName),
         vscode.commands.registerCommand('copypro.copyRelativePathWithLineNumber', copyRelativePathWithLineNumber),
         vscode.commands.registerCommand('copypro.copyRelativePath', copyRelativePath),
-        vscode.commands.registerCommand('copypro.copyPathRelativeToWorkspace', copyPathRelativeToWorkspace)
+        vscode.commands.registerCommand('copypro.copyPathRelativeToWorkspace', copyPathRelativeToWorkspace),
+        vscode.commands.registerCommand('copypro.copyProjectStructure', copyProjectStructure),
+        vscode.commands.registerCommand('copypro.copyDirectoryStructure', copyDirectoryStructure),
     );
 }
 
@@ -104,5 +106,50 @@ function copyPathRelativeToWorkspace() {
         vscode.window.showInformationMessage('Copied path relative to workspace to clipboard');
     }
 }
+
+function copyProjectStructure() {
+    if (vscode.workspace.workspaceFolders) {
+        const rootPath = vscode.workspace.workspaceFolders[0].uri.fsPath;
+        const structure = getDirectoryStructure(rootPath);
+        vscode.env.clipboard.writeText(structure);
+        vscode.window.showInformationMessage('Copied project structure to clipboard');
+    } else {
+        vscode.window.showErrorMessage('No workspace folder open');
+    }
+}
+
+function copyDirectoryStructure() {
+    vscode.window.showOpenDialog({
+        canSelectFiles: false,
+        canSelectFolders: true,
+        canSelectMany: false,
+        openLabel: 'Select Directory'
+    }).then(folderUri => {
+        if (folderUri && folderUri[0]) {
+            const structure = getDirectoryStructure(folderUri[0].fsPath);
+            vscode.env.clipboard.writeText(structure);
+            vscode.window.showInformationMessage('Copied directory structure to clipboard');
+        }
+    });
+}
+
+function getDirectoryStructure(dir: string, prefix: string = ''): string {
+    let result = '';
+    const files = fs.readdirSync(dir);
+    files.forEach((file, index) => {
+        const filePath = path.join(dir, file);
+        const stats = fs.statSync(filePath);
+        const isLast = index === files.length - 1;
+        const marker = isLast ? '└── ' : '├── ';
+
+        result += `${prefix}${marker}${file}\n`;
+
+        if (stats.isDirectory()) {
+            result += getDirectoryStructure(filePath, prefix + (isLast ? '    ' : '│   '));
+        }
+    });
+    return result;
+}
+
 
 export function deactivate() {}

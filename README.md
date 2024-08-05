@@ -1,6 +1,6 @@
 # CopyPro
 
-CopyPro is a powerful Visual Studio Code extension that enhances your copy functionality, making it easier to work with file paths and contents.
+CopyPro is a powerful Visual Studio Code extension that enhances your copy functionality, making it easier to work with file paths, contents, and project structures.
 
 ## Features
 
@@ -27,6 +27,12 @@ CopyPro provides the following commands:
 7. **Copy Path Relative to Workspace**
    - Copies the path of the current file relative to the workspace root.
 
+8. **Copy Project Structure** (`Ctrl+Alt+P` / `Cmd+Alt+P` on Mac)
+   - Copies the directory structure of the entire project.
+
+9. **Copy Directory Structure** (`Ctrl+Alt+S` / `Cmd+Alt+S` on Mac)
+   - Copies the directory structure of a selected directory within the project.
+
 ## Usage
 
 You can access all CopyPro commands through the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P` on Mac) by typing "CopyPro".
@@ -37,6 +43,8 @@ Additionally, you can use the following keyboard shortcuts:
 - `Ctrl+Alt+D` (`Cmd+Alt+D` on Mac): Copy All Files from Directory
 - `Ctrl+Alt+A` (`Cmd+Alt+A` on Mac): Copy Absolute Path
 - `Ctrl+Alt+N` (`Cmd+Alt+N` on Mac): Copy File Name
+- `Ctrl+Alt+P` (`Cmd+Alt+P` on Mac): Copy Project Structure
+- `Ctrl+Alt+S` (`Cmd+Alt+S` on Mac): Copy Directory Structure
 
 ## Installation
 
@@ -55,9 +63,11 @@ There are currently no known issues. If you encounter any problems, please repor
 
 ## Release Notes
 
-### 0.0.1
+### 0.0.3
 
-Initial release of CopyPro with all core functionalities.
+Added new features:
+- Copy Project Structure
+- Copy Directory Structure
 
 ## Contributing
 

@@ -3,7 +3,7 @@
   "displayName": "CopyPro",
   "description": "Enhanced copy functionality for VS Code",
   "publisher": "ImmuneFOMO",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "icon": "images/logo.png",
   "repository": {
     "type": "git",
@@ -21,7 +21,9 @@
     "onCommand:copypro.copyFileName",
     "onCommand:copypro.copyRelativePathWithLineNumber",
     "onCommand:copypro.copyRelativePath",
-    "onCommand:copypro.copyPathRelativeToWorkspace"
+    "onCommand:copypro.copyPathRelativeToWorkspace",
+    "onCommand:copypro.copyProjectStructure",
+    "onCommand:copypro.copyDirectoryStructure"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -53,6 +55,14 @@
       {
         "command": "copypro.copyPathRelativeToWorkspace",
         "title": "CopyPro: Copy Path Relative to Workspace"
+      },
+      {
+        "command": "copypro.copyProjectStructure",
+        "title": "CopyPro: Copy Project Structure"
+      },
+      {
+        "command": "copypro.copyDirectoryStructure",
+        "title": "CopyPro: Copy Directory Structure"
       }
     ],
     "keybindings": [
@@ -75,6 +85,16 @@
         "command": "copypro.copyFileName",
         "key": "ctrl+alt+n",
         "mac": "cmd+alt+n"
+      },
+      {
+        "command": "copypro.copyProjectStructure",
+        "key": "ctrl+alt+p",
+        "mac": "cmd+alt+p"
+      },
+      {
+        "command": "copypro.copyDirectoryStructure",
+        "key": "ctrl+alt+s",
+        "mac": "cmd+alt+s"
       }
     ]
   },
